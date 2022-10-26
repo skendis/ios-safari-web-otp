@@ -8,6 +8,14 @@
   </head>
   <body>
     <h1>OTP TEST</h1>
-    <input id="single-factor-code-text-field" autocomplete="one-time-code" />
+    <form action="/verify-otp" method="POST">
+      <input
+        type="text"
+        inputmode="numeric"
+        autocomplete="one-time-code"
+        pattern="\d{6}"
+        required
+      />
+    </form>
   </body>
 </html>
