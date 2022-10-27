@@ -10,10 +10,15 @@
     <h1>OTP TEST</h1>
     <form action="/verify-otp" method="POST">
       <input type="text" inputmode="numeric" />
-      <button>send</button>
+      <button onclick="printToScr()">send</button>
     </form>
 
     <script>
+      function printToScr() {
+        const elm = document.querySelector("h1");
+        const input = document.querySelector("input");
+        elm.innerText = input.value;
+      }
       if ("OTPCredential" in window) {
         window.addEventListener("DOMContentLoaded", (e) => {
           const input = document.querySelector(
